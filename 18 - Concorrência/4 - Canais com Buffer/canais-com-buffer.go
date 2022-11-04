@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	canal := make(chan string, 200)
+	canal := make(chan string, 3)
 	canal <- "Olá Mundo!"
 	canal <- "Programando em Go!"
 	canal <- "Programando em Go De Novo!"
