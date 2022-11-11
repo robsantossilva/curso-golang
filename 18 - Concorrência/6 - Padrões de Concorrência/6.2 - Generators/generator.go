@@ -6,15 +6,17 @@ import (
 )
 
 func main() {
-	canal := escrever("Olá Mundo!")
+	receivedChannel := make(chan string)
+	defer close(receivedChannel)
+
+	canal := escrever("Olá Mundo!", receivedChannel)
 
 	for i := 0; i < 10; i++ {
 		fmt.Println(<-canal)
 	}
 }
 
-func escrever(texto string) <-chan string {
-	canal := make(chan string)
+func escrever(texto string, canal chan string) <-chan string {
 
 	go func() {
 		for {
