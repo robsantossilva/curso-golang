@@ -6,7 +6,7 @@ import (
 
 // Forma representa uma forma geométrica
 type Forma interface {
-	area() float64
+	Area() float64
 }
 
 // Retangulo é uma estrutura que contém altura e largura

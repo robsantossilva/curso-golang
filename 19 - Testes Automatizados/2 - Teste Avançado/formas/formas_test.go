@@ -9,7 +9,7 @@ func TestArea(t *testing.T) {
 
 	t.Run("Retângulo", func(t *testing.T) {
 		ret := Retangulo{10, 12}
-		areaEsperada := float64(135)
+		areaEsperada := float64(120)
 		areaRecebida := ret.Area()
 
 		if areaEsperada != areaRecebida {
