@@ -19,8 +19,8 @@ func main() {
 		log.Fatal(erro)
 	}
 	fmt.Println(c)
-	cachorro2EmJSON := `{"nome":"Toby", "raca":"Poodle"}`
 
+	cachorro2EmJSON := `{"nome":"Toby", "raca":"Poodle"}`
 	c2 := make(map[string]string)
 	if erro := json.Unmarshal([]byte(cachorro2EmJSON), &c2); erro != nil {
 		log.Fatal(erro)
